@@ -7,6 +7,7 @@ function App() {
     <div className="app">
       <h1>hello</h1>
       <Row tittle="Rover pics " fetchUrl={request.fetchMarsPhotos} />
+      {/* <Row tittle="topic " fetchUrl={request.fetchDailytopic} /> */}
     </div>
   );
 }

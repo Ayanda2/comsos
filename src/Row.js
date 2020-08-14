@@ -9,12 +9,19 @@ function Row({ tittle, fetchUrl }) {
     async function fetchData() {
       const requests = await axios.get(fetchUrl);
 
-      console.log(requests);
+      setMars(requests.data.photos);
+      return requests;
     }
     fetchData();
   }, [fetchUrl]);
-
-  return <div></div>;
+  console.table(mars);
+  return (
+    <div className="mars_pic">
+      {mars.map((mars) => (
+        <img src={mars.img_src} alt={mars.camera} />
+      ))}
+    </div>
+  );
 }
 
 export default Row;
