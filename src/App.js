@@ -1,13 +1,11 @@
 import React from "react";
-import Row from "./Row";
+import Apod from "./Apod";
 import request from "./request";
 
 function App() {
   return (
     <div className="app">
-      <h1>hello</h1>
-      <Row tittle="Rover pics " fetchUrl={request.fetchMarsPhotos} />
-      {/* <Row tittle="topic " fetchUrl={request.fetchDailytopic} /> */}
+      <Apod tittle="Apod" fetchUrl={request.fetchApod} />
     </div>
   );
 }
